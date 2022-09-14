@@ -1,0 +1,137 @@
+.header {
+  width: 100%;
+  @include adaptiveValue("padding-top", 40, 15, 1);
+  @include adaptiveValue("padding-bottom", 40, 15, 1);
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #eaeaea;
+  // .header__container
+  &__container {
+    align-items: center;
+  }
+  // .header__logo
+  &__logo {
+    margin-right: auto;
+  }
+  // .header__cart
+  &__cart {
+    @include adaptiveValue("margin-right", 30, 10, 1);
+  }
+  // .header__favorites
+  &__favorites {
+    @include adaptiveValue("margin-right", 30, 10, 1);
+  }
+  // .header__profile
+  &__profile { }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  // .logo__img
+  &__img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    @include adaptiveValue("margin-right", 16, 8, 1);
+    & img {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+  }
+  // .logo__text
+  &__text {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 425.98px) {
+      display: none;
+    }
+    & h3 {
+      font-weight: 700;
+      line-height: 24px;
+      @include adaptiveValue("font-size", 20, 14, 1);
+      text-transform: uppercase;
+      color: #000;
+    }
+    & span {
+      font-weight: 400;
+      line-height: 120%;
+      color: #9d9d9d;
+      @include adaptiveValue("font-size", 14, 11, 1);
+    }
+  }
+}
+.cart-btn {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  &__icon {
+    & svg {
+      & path {
+        transition: $standartTrans;
+      }
+    }
+  }
+  &:hover {
+    & .cart-btn__icon {
+      & svg {
+        & path {
+          stroke: $greenColor;
+        }
+      }
+    }
+  }
+  // .cart-btn__icon
+  &__icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+  // .cart-btn__cost
+  &__cost {
+    font-weight: 600;
+    line-height: 160%;
+    color: #5c5c5c;
+  }
+}
+.favorites-btn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  &__icon {
+    & path {
+      transition: $standartTrans;
+    }
+  }
+  &:hover {
+    & .favorites-btn__icon {
+      & path {
+        fill: $greenColor;
+      }
+    }
+  }
+}
+.profile-btn {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  &__icon {
+    & path {
+      transition: $standartTrans;
+    }
+  }
+  &:hover {
+    & .profile-btn__icon {
+      & path {
+        fill: $greenColor;
+      }
+    }
+  }
+}

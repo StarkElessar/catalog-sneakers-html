@@ -1,0 +1,36 @@
+.wrapper {
+  min-height: 100%;
+  @include adaptiveValue('padding-top', 60, 20, 1);
+  @include adaptiveValue('padding-bottom', 60, 20, 1);
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #E7F6FF;
+  overflow: hidden;
+  @media (max-width: 768.98px) {
+    padding: 0;
+  }
+}
+[class*="__container"] {
+  display: flex;
+  width: 100%;
+  max-width: 1080px + $mainOffset * 2;
+  margin: 0 auto;
+  @include adaptiveValue('padding-left', 40, 15, 1);
+  @include adaptiveValue('padding-right', 40, 15, 1);
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1080px + 100px;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(#000, 5%);
+  overflow: hidden;
+  @media (max-width: 768.98px) {
+    border-radius: 0;
+  }
+}
