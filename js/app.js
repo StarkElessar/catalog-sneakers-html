@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = event.target
 
     if (target && target.closest('.product-card__favorites')) {
-      favoritesBtn.classList.toggle('active')
+      target.closest('.product-card__favorites').classList.toggle('active')
     }
     if (target && target.closest('.product-card__add-cart')) {
-      addToCartBtn.classList.toggle('active')
+      target.closest('.product-card__add-cart').classList.toggle('active')
     }
   })
 })
